@@ -1,0 +1,4 @@
+node_modules
+config/development.env.yml
+.vscode/launch.json
+package-lock.json
