@@ -1,11 +1,25 @@
 const db = require('./connections.model')
 const { format } = require('mysql')
 
+/**
+*@class Database handler
+*Handles all requests related to database communications
+**/
 class DatabaseModel {
     constructor(){
         this.mysqlformat = format;
     }
 
+    /**
+    * DOCU: Function to run query statements
+    * Triggered: This is being called in most functions that require communications with database <br>
+    * Last Updated Date: October 23, 2022
+    * @async
+    * @function
+    * @memberOf DatabaseModel
+    * @return {Object} - response_data = { status: true, result: [fetched-data], error: null }
+    * @author Jomar
+    */
     runQueryStatements = (query) => {
 
         return new Promise((resolve, reject) => {

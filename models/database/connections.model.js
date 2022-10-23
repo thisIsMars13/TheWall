@@ -1,12 +1,12 @@
 const mysql = require("mysql");
 const { DATABASE } = require("../../config/constants/app.constants");
 
-const con = mysql.createConnection({ ...DATABASE })
+const mysql_connection = mysql.createConnection({ ...DATABASE })
 
-con.connect(err => {
+mysql_connection.connect(err => {
     if(err) {
         throw err;
     }
 })
 
-module.exports = con;
+module.exports = mysql_connection;
