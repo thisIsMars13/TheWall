@@ -13,8 +13,6 @@ try {
     for(let key in data){
         AppConstants[key] = data[key];
     }
-
-
 } 
 catch (error) {
     console.log(`Failed to load environment constants.`, error);

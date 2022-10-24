@@ -86,7 +86,7 @@ class UsersModel extends DatabaseModel {
                     response_data.message = "User successfully logged in";
                 }
                 else{
-                    response_data.error = error;
+                    response_data.error = "Credentials provided did not match our record";
                 }
             }
             else{

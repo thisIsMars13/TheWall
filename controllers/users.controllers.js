@@ -83,6 +83,20 @@ class UserControllers {
 
         res.json(response_data);
     }
+
+    /**
+    * DOCU: Function to register a user in the application
+    * Triggered: This is being called when user attempt to register in the application <br>
+    * Last Updated Date: October 23, 2022
+    * @async
+    * @function
+    * @memberOf UserControllers
+    * @return {Object} - response_data = { status: true, result: null, error: null, message: "User was successfully created"}
+    * @author Jomar
+    */
+    renderLogin = async function(req, res = undefined) {
+        res.render('index', { title: 'Login Page'})
+    }
 }
 
 module.exports = UserControllers;

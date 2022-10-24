@@ -1,4 +1,5 @@
 const UserRouter = require('./users.routes');
+const ViewRouter = require('./views.routes');
 
 /**
 * DOCU: Function to designate all api requests to specific routes
@@ -10,6 +11,7 @@ const UserRouter = require('./users.routes');
 */
 let APIRoute = (app) => {
     app.use('/api/users', UserRouter);
+    app.use('/', ViewRouter);
 }
 
 module.exports = APIRoute;
